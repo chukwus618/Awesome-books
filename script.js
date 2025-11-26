@@ -13,9 +13,7 @@ let books = JSON.parse(localStorage.getItem('books')) || [
 const booksContainer = document.getElementById('books-container');
 books.forEach((book, index) => {
   booksContainer.innerHTML += `<section>
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <button type="button" class="remove-button" data-index="${index}">Remove</button>
+      <p>${book.title}<br>${book.author}<br><button type="button" class="remove-button" data-index="${index}">Remove</button></p>
       <hr>
   </section>`;
 });
@@ -32,9 +30,7 @@ addBtn.addEventListener('click', () => {
   booksContainer.innerHTML = '';
   books.forEach((book, index) => {
     booksContainer.innerHTML += `<section>
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <button type="button" class="remove-button" data-index="${index}">Remove</button>
+      <p>${book.title}<br>${book.author}<br><button type="button" class="remove-button" data-index="${index}">Remove</button></p>
       <hr>
     </section>`;
   });
@@ -51,9 +47,7 @@ booksContainer.addEventListener('click', (e) => {
     booksContainer.innerHTML = '';
     books.forEach((book, index) => {
       booksContainer.innerHTML += `<section>
-        <p>${book.title}</p>
-        <p>${book.author}</p>
-        <button type="button" class="remove-button" data-index="${index}">Remove</button>
+        <p>${book.title}<br>${book.author}<br><button type="button" class="remove-button" data-index="${index}">Remove</button></p>
         <hr>
       </section>`;
     });
