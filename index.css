@@ -1,0 +1,54 @@
+body {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+#books-container {
+  border: 2px solid black;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#books-container tbody tr:nth-of-type(odd) {
+  background-color: grey;
+}
+
+td {
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#line {
+  margin: 20px auto;
+  width: 20%;
+  border-bottom: 2px solid black;
+}
+
+button,
+input {
+  border: 2px solid black;
+}
+
+button {
+  cursor: pointer;
+}
+
+#add-btn {
+  margin-left: 145px;
+}
