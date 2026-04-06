@@ -1,11 +1,14 @@
 body {
   box-sizing: border-box;
   background-color: #f2f2f2;
+  margin: 0;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+  font-size: 25px;
 }
 
 h2 {
@@ -51,4 +54,52 @@ button {
 
 #add-btn {
   margin-left: 145px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.page-section {
+  display: none;
+  padding: 50px 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  color: blue;
+}
+
+.page-section.active {
+  display: block;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  padding: 10px;
+}
+
+#date-time {
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
