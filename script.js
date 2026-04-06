@@ -69,3 +69,22 @@ navLinks.forEach((link) => {
     document.getElementById(sectionId).classList.add('active');
   });
 });
+
+const dateTime = document.getElementById('date-time');
+
+function updateDateTime() {
+  const now = new Date();
+
+  dateTime.textContent = now.toLocaleString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+  });
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
