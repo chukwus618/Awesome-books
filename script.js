@@ -27,6 +27,8 @@ const booksContainer = document.getElementById('books-container').querySelector(
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const addBtn = document.querySelector('#add-btn');
+const navLinks = document.querySelectorAll('nav a');
+const sections = document.querySelectorAll('.page-section');
 
 function displayBooks() {
   booksContainer.innerHTML = '';
@@ -54,4 +56,16 @@ booksContainer.addEventListener('click', (e) => {
     library.removeBook(index);
     displayBooks();
   }
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const sectionId = link.dataset.section;
+    sections.forEach((section) => {
+      section.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+  });
 });
