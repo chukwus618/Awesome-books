@@ -61,6 +61,8 @@ header {
   justify-content: space-between;
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 2;
   padding: 10px;
 }
@@ -102,4 +104,27 @@ footer {
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  #contact-page {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  .page-section {
+    padding: 100px 50px;
+  }
+
+  header {
+    padding: 20px 50px;
+  }
+
+  footer {
+    padding: 50px;
+  }
+
+  #date-time {
+    padding-right: 50px;
+  }
 }
