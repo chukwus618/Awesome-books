@@ -23,7 +23,7 @@ h2 {
 }
 
 #books-container tbody tr:nth-of-type(odd) {
-  background-color: grey;
+  background-color: gray;
 }
 
 td {
@@ -56,6 +56,11 @@ button {
   margin-left: 145px;
 }
 
+.remove-button {
+  display: flex;
+  justify-self: flex-end;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -64,7 +69,11 @@ header {
   right: 0;
   left: 0;
   z-index: 2;
-  padding: 10px;
+  padding: 0 10px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  margin: 10px;
 }
 
 .nav-links {
@@ -76,7 +85,7 @@ header {
 
 .page-section {
   display: none;
-  padding: 50px 10px;
+  padding: 100px 10px;
 }
 
 a {
@@ -96,11 +105,14 @@ footer {
   bottom: 0;
   position: fixed;
   padding: 10px;
+  background-color: white;
+  width: 100%;
 }
 
 #date-time {
-  position: relative;
+  position: fixed;
   top: 50px;
+  right: 0;
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
@@ -113,15 +125,32 @@ footer {
   }
 
   .page-section {
-    padding: 100px 50px;
+    padding: 150px 50px;
   }
 
   header {
-    padding: 20px 50px;
+    margin: 10px 50px;
+  }
+
+  .nav-links {
+    gap: 30px;
+  }
+
+  button {
+    padding: 10px;
+  }
+
+  input {
+    width: 50%;
+    height: 30px;
+  }
+
+  #add-btn {
+    margin-left: 295px;
   }
 
   footer {
-    padding: 50px;
+    padding: 10px 50px;
   }
 
   #date-time {
